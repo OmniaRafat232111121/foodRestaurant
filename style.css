@@ -3,6 +3,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     
 }
 html{
@@ -17,6 +18,7 @@ ul{
 }
 a{
     text-decoration: none;
+
 }
 body{
     min-height: 100vh;
@@ -37,7 +39,7 @@ header{
     position: relative;
 }
 .sticky  {
-background-color: #fff;
+background-color: #ff0157;
 padding:10px 30px;
 box-shadow: 10p 20px 5px  rgb(0,0,0,0.5);
 color:#000;
@@ -49,6 +51,7 @@ color:#000;
 nav ul li {
     display: inline-block;
     margin-left: 20px;
+    position: relative;
     
 }
 nav ul li a{
@@ -63,7 +66,7 @@ nav ul li a{
     color:#fff;
 }
 .logo h1 span{
-    color:#ff0157;
+    color:#fff;
 }
  .logo i{
     display:none;
@@ -324,7 +327,39 @@ letter-spacing: 10px;
     width:100%;
     max-width: 100%;
 }
+
 @media(max-width:767px){
+    header .navigation{
+      display: none;
+    }
+    header .navigation.active{
+       width:400px;
+       height:500px;
+       position:fixed;
+        top:80px;
+        left:30px;
+  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+       
+         background-color:#fff;
+       
+    }
+     nav ul li {
+        margin-bottom: 20px;
+        color:#ff0157;
+   
+      
+     }
+      nav ul li a{
+              color:#ff0157;
+
+      }
+     nav ul li :hover{
+        padding-left:20px;
+     }
     .contact .row .left-test {
         
     width: 350px;
@@ -332,15 +367,42 @@ letter-spacing: 10px;
     .contact .row .left-test h3{
         font-size: 16px;
     }
-    .logo i{
-        color:#fff;
-        position:absolute;
-        top:10px;
-        left:20px;
+    .menuToggle{
+       position: relative;
+       background: url('./images/menu.png');
+       background-repeat: no-repeat;
+       background-size: 30px;
+       right:-350px;
+       top:-30px;
+       cursor: pointer;
+       width: 40px;
+       height:40px;
+     
+       font-size: 40px;
+       padding:-30px 10px;
+     
+      
+
     }
-     nav ul li a{
-        display: none;
+     .menuToggle.active{
+       background: url('./images/close.png');
+       background-position: center;
+       background-repeat: no-repeat;
+        background-size: 30px;
+              cursor: pointer;
+              
+               
+             
+        }
+        
+     nav ul li {
+        
+    
     }
  
-
+  
+}
+@media (max-width:991px) {
+    
+    
 }
